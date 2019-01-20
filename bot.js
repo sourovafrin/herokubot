@@ -18,4 +18,4 @@ client.on('message', message => {
 //if (message.content === prefx + 'avtr') {
    //  message.reply(message.author.avatarURL);
 });
-client.login(process.env.BOT_TOKEN
+client.login(process.env.BOT_TOKEN);
