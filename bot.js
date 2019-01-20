@@ -16,7 +16,7 @@ client.on('message', message => {
     // If the message is '!rip'
     if (message.content === 'fck') {
         // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
         // Send the attachment in the message channel
         message.channel.send(attachment);
     }
