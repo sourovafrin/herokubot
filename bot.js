@@ -20,7 +20,7 @@ client.on('message', message => {
   
   if (message.content === 'Ayasha is beautiful') {
      message.react('😂');
-     message.channel.send("Stop lying. Shw won't pay you for that");}
+     message.channel.send("Stop lying. She won't pay you for that");}
   
   if (message.content === prefix + 'fck') {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
