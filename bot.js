@@ -2,8 +2,6 @@ const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
-const axios = require('axios')
-import Axios from 'axios';
 import Discord from 'discord.js';
 import { Command } from 'discord.js-commando';
 
