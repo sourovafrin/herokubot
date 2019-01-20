@@ -10,7 +10,7 @@ client.on('message', message => {
     	message.reply('hop');
   	}if (message.content === 'avtr') {
         message.reply(message.author.avatarURL);
-    }if (message.content === 'fuck') {
+    }if (message.content === 'fck') {
         // Create the attachment using Attachment
         const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
         // Send the attachment in the message channel
