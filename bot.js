@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 // Extract the required classes from the discord.js module
 const { Client, Attachment } = require('discord.js');
 
@@ -16,7 +17,7 @@ client.on('message', message => {
     // If the message is '!rip'
     if (message.content === '!rip') {
         // Create the attachment using Attachment
-        const attachment = new Discord.Attachment('https://i.imgur.com/w3duR07.png');
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
         // Send the attachment in the message channel
         message.channel.send(attachment);
     }
