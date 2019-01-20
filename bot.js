@@ -23,7 +23,7 @@ client.on('message', message => {
       message.channel.send(attachment);
     }
   if (message.content === prefix + 'del') {
-     message.delete(10);}
+     message.delete();}
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
