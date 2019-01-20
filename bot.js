@@ -8,20 +8,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (msg === prefix + 'hi') {
+  if (message.content === prefix + 'hi') {
      message.channel.send('hello');}
     
-  if (msg === prefix + 'ping') {
+  if (message.content === prefix + 'ping') {
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
     
-  if (msg === prefix + 'avtr') {
+  if (message.content === prefix + 'avtr') {
      message.reply(message.author.avatarURL);}
   
-  if (msg === 'Ayasha is beautiful') {
+  if (message.content === 'Ayasha is beautiful') {
      message.react('😂');
      message.channel.send("Stop lying. She won't pay you for that");}
   
-  if (msg === prefix + 'fck') {
+  if (message.content === prefix + 'fck') {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
           
