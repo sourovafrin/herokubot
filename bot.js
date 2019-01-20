@@ -8,7 +8,9 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'hi') {
     	message.reply('hop');
-  	}
+  	}if (message.content === 'avtr') {
+        message.reply(message.author.avatarURL);
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
