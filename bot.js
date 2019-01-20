@@ -7,10 +7,12 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-// Create an event listener for messages
+
 client.on('message', message => {
   if (message.content === prefix + 'hi') {
     message.channel.send('hello');
-  }
+  }if if(message.content === prefix + 'ping')) {
+     message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
+    }
 });
 client.login(process.env.BOT_TOKEN);
