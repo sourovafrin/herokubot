@@ -18,6 +18,9 @@ client.on('message', message => {
   if (message.content === prefix + 'avtr') {
      message.reply(message.author.avatarURL);}
   
+  if (message.content === 'Ayasha is beautiful') {
+     message.react('😂');}
+  
   if (message.content === prefix + 'fck') {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);
