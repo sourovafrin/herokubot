@@ -1,24 +1,26 @@
-// Extract the required classes from the discord.js module
 const { Client, Attachment } = require('discord.js');
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const prefix = '.';
 
-// Create an instance of a Discord client
-const client = new Client();
-
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
 client.on('ready', () => {
   console.log('I am ready!');
 });
 
+
 client.on('message', message => {
-    // If the message is '!rip'
-    if (message.content === '!rip') {
-        // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
+  if (message.content === prefix + 'hi') {
+     message.channel.send('hello');}
+    
+  if (message.content === prefix + 'ping') {
+     message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
+    
+  if (message.content === prefix + 'avtr') {
+     message.reply(message.author.avatarURL);}
+  
+  if (message.content === prefix + 'fck') {
+      const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
+      message.channel.send(attachment);
     }
 });
 
