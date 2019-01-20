@@ -2,7 +2,7 @@ const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
-const ba;
+var ba;
 
 
 client.on('ready', () => {
@@ -27,7 +27,7 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
   
-  if (message.content === prefix + 'clr' + ba) {
+  if (message.content === prefix + 'clr ' + ba) {
     message.channel.bulkDelete(ba);}
     
 });
