@@ -32,7 +32,7 @@ client.on('message', message => {
        const fetched = await message.channel.fetchMessages({limit: args[0]});
         message.channel.bulkDelete(fetched)}
   purge();}
-    
+          }
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
