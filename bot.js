@@ -11,8 +11,8 @@ client.on('message', message => {
   	}if (message.content === 'avtr') {
         message.reply(message.author.avatarURL);
     }if (message.content === 'fck') {
-        const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
-        message.reply(attachment);
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        message.channel.send(attachment);
     }
 });
 
