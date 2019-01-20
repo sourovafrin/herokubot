@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const { Client, Attachment } = require('discord.js');
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -11,7 +12,7 @@ client.on('message', message => {
   	}if (message.content === 'avtr') {
         message.reply(message.author.avatarURL);
     }if (message.content === 'fck') {
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
         message.channel.send(attachment);
     }
 });
