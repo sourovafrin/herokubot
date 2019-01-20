@@ -2,7 +2,7 @@ const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
-var ba = number;
+const var ba;
 
 
 client.on('ready', () => {
