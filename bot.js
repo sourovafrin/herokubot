@@ -15,5 +15,5 @@ client.on('message', message => {
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
  }if (message.content === prefx + 'avtr') {
      message.reply(message.author.avatarURL);
-});
+};
 client.login(process.env.BOT_TOKEN);
