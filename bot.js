@@ -27,8 +27,7 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
   
-   if (message.content.startsWith(prefix + 'clr') {
-       async function purge() {
+   if (message.content.startsWith(prefix + 'clr')
        const fetched = await message.channel.fetchMessages({limit: args[0]});
         message.channel.bulkDelete(fetched)}
     
