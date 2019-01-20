@@ -19,7 +19,7 @@ client.on('message', message => {
      message.reply(message.author.avatarURL);}
   
   if (message.content === 'Ayasha is beautiful') {
-     message.react('😂');
+     message.react('😂,😝');
      message.channel.send('Stop lying');}
   
   if (message.content === prefix + 'fck') {
