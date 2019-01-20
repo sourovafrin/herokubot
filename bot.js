@@ -12,7 +12,7 @@ client.on('message', message => {
         message.reply(message.author.avatarURL);
     }if (message.content === 'fck') {
         const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
-        message.channel.send(attachment);
+        message.reply(attachment);
     }
 });
 
