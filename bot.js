@@ -28,7 +28,7 @@ client.on('message', message => {
       message.channel.send(attachment);}
   
   if (message.content === prefix + 'clr' + am ) {
-    message.channel.bulkDelete(am);
+    message.channel.bulkDelete(am);}
     
 });
 
