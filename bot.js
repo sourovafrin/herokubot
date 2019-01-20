@@ -1,43 +1,12 @@
 const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const axios = require('axios')
-const Commando = require('discord.js-commando');
 const prefix = '.';
 
 
 client.on('ready', () => {
   console.log('I am ready!');
 });
-
-  async run(message, { currencies }) {
-    axios.get('https://min-api.cryptocompare.com/data/pricemulti', {
-      params: {
-        fsyms: 'STEEM,SBD*',
-        tsyms: currencies,
-      },
-    })
-      .then((response) => {
-        let sbdPrices = '';
-        let steemPrices = '';
-
-        Object.keys(response.data.STEEM).forEach((c) => {
-          steemPrices += `${response.data.STEEM[c]} ${c}\n`;
-        });
-
-        Object.keys(response.data['SBD*']).forEach((c) => {
-          sbdPrices += `${response.data['SBD*'][c]} ${c}\n`;
-        });
-
-        const richEmbed = new Discord.RichEmbed()
-          .setColor('#4ba2f2')
-          .addField('STEEM', steemPrices, true)
-          .addField('SBD', sbdPrices, true);
-
-        message.channel.send(richEmbed);
-      })
-      .catch(error => console.error(error));
-  }
 
 client.on('message', message => {
   if (message.content === prefix + 'hi') {
