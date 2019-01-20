@@ -2,7 +2,7 @@ const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
-var ba;
+
 
 
 client.on('ready', () => {
@@ -28,7 +28,8 @@ client.on('message', message => {
       message.channel.send(attachment);}
   
   if (message.content === prefix + 'clr ' + ba) {
-    message.channel.bulkDelete(ba);}
+    message.channel.bulkDelete(ba);
+  var ba;}
     
 });
 
