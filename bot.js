@@ -27,10 +27,8 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
   
-   if (message.content.startsWith(prefix + 'clr')) { // This time we have to use startsWith, since we will be adding a number to the end of the command.
-        // We have to wrap this in an async since awaits only work in them.
-        async function purge() {
-            message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
+   if (message.content.startsWith(prefix + 'clr')) { 
+        async function purge() 
 
             // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
             if (!message.member.roles.find("name", "Owner")) { // This checks to see if they DONT have it, the "!" inverts the true/false
