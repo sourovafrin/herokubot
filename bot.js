@@ -5,9 +5,7 @@ const prefix = '.';
 
 
 
-client.on('ready', () => {
-  console.log('I am ready!');
-});
+
 bot.on('message', message => {
 
     // Variables - Variables make it easy to call things, since it requires less typing.
@@ -41,6 +39,8 @@ client.on('message', message => {
   purge();}
           
 });
-
+client.on('ready', () => {
+  console.log('I am ready!');
+});
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.BOT_TOKEN);
