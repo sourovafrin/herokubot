@@ -15,7 +15,8 @@ client.on('message', message => {
   if (message.content === prefix + 'ping') {
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
     
-//if (message.content === prefx + 'avtr') {
-   //  message.reply(message.author.avatarURL);
+  if (message.content === prefx + 'avtr') {
+     message.reply(message.author.avatarURL);}
+  
 });
 client.login(process.env.BOT_TOKEN);
