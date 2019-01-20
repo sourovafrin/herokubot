@@ -22,6 +22,8 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);
     }
+  if (message.content === prefix + 'del') {
+     message.delete(10);}
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
