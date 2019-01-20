@@ -19,7 +19,7 @@ client.on('message', message => {
      message.reply(message.author.avatarURL);}
   
   if (message.content === prefix + 'fck') {
-      const attachment = new Attachment('https://i.giphy.com/media/143cE5FtVmKrNC/giphy.webp');
+      const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);
     }
 });
