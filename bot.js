@@ -9,6 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === prefix + 'hi') {
+    message.delete(0);
      message.channel.send('hello');}
     
   if (message.content === prefix + 'ping') {
