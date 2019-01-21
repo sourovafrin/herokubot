@@ -1,4 +1,4 @@
-// Calling Packages
+const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -14,19 +14,30 @@ bot.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
     let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
 
-    // Commands
-
-    // Ping
-    if (msg === prefix + 'PING') { // This checks if msg (the message but in all caps), is the same as the prefix + the command in all caps.
-
-        // Now, let's send a response.
-        message.channel.send('Ping!'); // This 'sends' the message to the channel the message was in. You can change what is in the message to whatever you want.
-
-    }
+    if (msg === prefix + 'hi') {
+    message.delete(0);
+     message.channel.send('hello');}
+    
+  if (msg === prefix + 'ping') {
+    message.delete(0);
+     message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
+    
+  if (msg === prefix + 'avtr') {
+    message.delete(0);
+     message.reply(message.author.avatarURL);}
+  
+  if (msg === 'Ayasha is beautiful') {
+     message.react('😂');
+     message.channel.send("Stop lying. She won't pay you for that");}
+  
+  if (msg === prefix + 'fck') {
+    message.delete(0);
+      const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
+      message.channel.send(attachment);}
 
 
     // Purge
-    if (msg.startsWith(prefix + 'PURGE')) { // This time we have to use startsWith, since we will be adding a number to the end of the command.
+    if (msg.startsWith(prefix + 'clr')) { // This time we have to use startsWith, since we will be adding a number to the end of the command.
         // We have to wrap this in an async since awaits only work in them.
         async function purge() {
             message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
