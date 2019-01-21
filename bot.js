@@ -29,12 +29,9 @@ client.on('message', message => {
     message.delete(0);
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
-  var bb='';
-    if (message.content.startsWith(prefix + 'clr' + bb)) {
-        async function clear() {
-            message.delete();
-            const fetched = await message.channel.fetchMessages({limit: bb});
-            message.channel.bulkDelete(fetched);
+  
+    if (message.content.startsWith(prefix + 'clr' + var bb)) {
+            message.channel.bulkDelete(bb);
         }
         clear();
     }
