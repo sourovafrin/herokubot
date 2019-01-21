@@ -32,7 +32,7 @@ client.on('message', message => {
   
   if (message.content.mentions) {
     message.delete(0);
-     message.channel.send((`${message.author}` + 'hi,,,,');}
+     message.channel.send((message.mentions.avatarURL);}
   
   
          
