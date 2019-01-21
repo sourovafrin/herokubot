@@ -30,10 +30,10 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
   
-    if (message.content.toLowerCase().startsWith(prefix + 'clr')) {
+    if (message.content.toLowerCase().startsWith(prefix + 'clr' + am)) {
         async function clear() {
             message.delete();
-            const fetched = await message.channel.fetchMessages({limit: 99});
+            const fetched = await message.channel.fetchMessages({limit: am});
             message.channel.bulkDelete(fetched);
         }
         clear();
