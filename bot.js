@@ -3,9 +3,22 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
 
+
 client.on('ready', () => {
   console.log('I am ready!');
 });
+args: [
+        {
+          key: 'howMany',
+          type: 'integer',
+          default: 50,
+        },
+      ],
+  async run(message, { howMany }) {
+    message.delete();
+    const fetched = await message.channel.fetchMessages({ limit: howMany });
+    try {
+      message.channel.bulkDelete(fetched);
 
 client.on('message', message => {
   if (message.content === prefix + 'hi') {
