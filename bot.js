@@ -30,7 +30,7 @@ client.on('message', message => {
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
   
-  if (message.content === prefix + 'avtr ' + message.mentions) {
+  if (message.content === prefix + "avtr" + message.mentions) {
     message.delete(0);
      message.channel.send(message.mentions.avatarURL);}
   
