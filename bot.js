@@ -13,9 +13,11 @@ client.on('message', message => {
      message.channel.send('hello');}
     
   if (message.content === prefix + 'ping') {
+    message.delete(0);
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
     
   if (message.content === prefix + 'avtr') {
+    message.delete(0);
      message.reply(message.author.avatarURL);}
   
   if (message.content === 'Ayasha is beautiful') {
@@ -23,6 +25,7 @@ client.on('message', message => {
      message.channel.send("Stop lying. She won't pay you for that");}
   
   if (message.content === prefix + 'fck') {
+    message.delete(0);
       const attachment = new Attachment('http://gif-finder.com/wp-content/uploads/2017/05/Gillian-Jacobs-Fuck-You.gif');
       message.channel.send(attachment);}
           
