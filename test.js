@@ -19,8 +19,7 @@ bot.on('message', message => {
      message.channel.send('hello');}
     
     if (role.equals(special) {
-        message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'))
-    }
+        message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'));}
         
   if (msg === prefix + 'PING') {
     message.delete(0);
