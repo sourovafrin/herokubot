@@ -18,10 +18,17 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send('hello');}
     
-    if (msg.username === 'sourovafrin' ) {
-    message.delete(0);
-     message.channel.send('hello');}
-    
+    if (!message.member.roles.find("name", "special")) {
+        message.react('🇷');
+        message.react('🇪');
+        message.react('🇦');
+        message.react('🇿');
+        message.react('❤️️');
+        message.react('🇾');
+        message.react('🇴');
+        message.react('🇺');
+    }
+        
   if (msg === prefix + 'PING') {
     message.delete(0);
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
