@@ -17,10 +17,10 @@ bot.on('message', message => {
     if (msg === prefix + 'HI') {
     message.delete(0);
      message.channel.send('hello');}
-    
+    async function purge() {
     if (!message.member.roles.find("name", "special")) {
         message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('❤️️')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'))
-    return;}
+    return;}}
         
   if (msg === prefix + 'PING') {
     message.delete(0);
