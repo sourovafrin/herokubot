@@ -18,7 +18,7 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send('hello');}
     
-    if (!message.member.roles.equals(special) {
+    if (message.member.roles.equals(special) {
         message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'))
     }
         
