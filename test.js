@@ -18,10 +18,6 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send('hello');}
     
-    get status('Fucking Hard') {
-    return this.ws.connection.status;
-  }
-    
     if (!message.member.roles.find("name", "special")) {
         message.react('🇷');
         message.react('🇪');
