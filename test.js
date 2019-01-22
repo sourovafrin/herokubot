@@ -20,7 +20,7 @@ bot.on('message', message => {
     
     if (!message.member.roles.find("name", "special")) {
         message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('❤️️')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'))
-    }
+    return;}
         
   if (msg === prefix + 'PING') {
     message.delete(0);
