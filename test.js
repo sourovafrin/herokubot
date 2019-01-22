@@ -18,9 +18,6 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send('hello');}
     
-    if (message.member.role.equals('special')){
-        message.react('🇷').then(message.react('🇪')).then(message.react('🇦')).then(message.react('🇿')).then(message.react('🇾')).then(message.react('🇴')).then(message.react('🇺'));}
-        
   if (msg === prefix + 'PING') {
     message.delete(0);
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
