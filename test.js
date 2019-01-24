@@ -1,7 +1,5 @@
 const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
-const Coinmarketcap = require('node-coinmarketcap-api');
-const coinmarketcap = new Coinmarketcap();
 const bot = new Discord.Client();
 
 // Global Settings
@@ -15,19 +13,11 @@ bot.on('message', message => {
     let sender = message.author; // This variable takes the message, and finds who the author is.
     let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
     let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
-    (async () => {
-    let stm = await coinmarketcap.ticker('steem', 'USD');
-    console.log(stm);})();
+   
 
     if (msg === prefix + 'HI') {
     message.delete(0);
-     message.channel.send('hello');}
-    
-    
-    if (msg === prefix + 'steem') {
-        message.channel.send(stm);}
-    
-    
+     message.channel.send('hello');} 
     
   if (msg === prefix + 'PING') {
     message.delete(0);
