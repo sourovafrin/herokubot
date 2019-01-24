@@ -20,6 +20,14 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send('hello');}
     
+    
+    if (msg === prefix + 'stm') {
+        (async () => {
+    let bitcoin_price = await coinmarketcap.ticker('steem', 'USD');
+     message.channel.send(bitcoin_price);}
+    
+    
+    
   if (msg === prefix + 'PING') {
     message.delete(0);
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
