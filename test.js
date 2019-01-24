@@ -15,16 +15,15 @@ bot.on('message', message => {
     let sender = message.author; // This variable takes the message, and finds who the author is.
     let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
     let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
+    let stm = await coinmarketcap.ticker('steem', 'USD');
 
     if (msg === prefix + 'HI') {
     message.delete(0);
      message.channel.send('hello');}
     
     
-    if (msg === prefix + 'stm') {
-        (async () => {
-    let bitcoin_price = await coinmarketcap.ticker('steem', 'USD');
-     message.channel.send(bitcoin_price);}
+    if (msg === prefix + 'steem') {
+        message.channel.send(stm);}
     
     
     
