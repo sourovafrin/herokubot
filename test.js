@@ -5,7 +5,7 @@ const coinmarketcap = new Coinmarketcap();
 const bot = new Discord.Client();
 
 // Global Settings
-const prefix = '.'; // This is the prefix, you can change it to whatever you want.
+const prefix = '!'; // This is the prefix, you can change it to whatever you want.
 
 // Listener Event: Runs whenever a message is received.
 bot.on('message', message => {
