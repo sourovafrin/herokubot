@@ -1,5 +1,7 @@
 const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
+const Coinmarketcap = require('node-coinmarketcap-api');
+const coinmarketcap = new Coinmarketcap();
 const bot = new Discord.Client();
 
 // Global Settings
