@@ -26,6 +26,10 @@ bot.on('message', message => {
   if (msg === prefix + 'AVTR') {
     message.delete(0);
      message.reply(message.author.avatarURL);}
+    
+  if (message.content.toUpperCase().startsWith(prefix + 'AVTR')) {
+  var member= message.mentions.members.first();
+      message.reply(message.member.avatarURL);}
   
   if (msg === 'AYASHA IS BEAUTIFUL') {
      message.react('😂');
