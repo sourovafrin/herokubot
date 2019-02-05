@@ -29,7 +29,7 @@ bot.on('message', message => {
     
   if (message.content.toUpperCase().startsWith(prefix + 'AVTR')) {
  // var member= message.mentions.members.first();
-      message.channel.send(message.member.avatarURL);}
+      message.channel.send(message.mentions.avatarURL);}
   
   if (msg === 'AYASHA IS BEAUTIFUL') {
      message.react('😂');
