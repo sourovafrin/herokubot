@@ -23,13 +23,10 @@ bot.on('message', message => {
     message.delete(0);
      message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");}
     
-  //if (msg === prefix + 'AVTR') {
-   // message.delete(0);
-   //  message.reply(message.author.avatarURL);}
+  if (msg === prefix + 'AVTR') {
+    message.delete(0);
+    message.reply(message.author.avatarURL);}
     
-  if (message.content.toUpperCase().startsWith(prefix + 'AVTR')) {
- // var member= message.mentions.members.first();
-      message.channel.send(message.mentions.avatarURL);}
   
   if (msg === 'AYASHA IS BEAUTIFUL') {
      message.react('😂');
